@@ -1,4 +1,28 @@
 #!/usr/bin/env python3
+"""
+#   Steel Mill Slab Design Problem
+#
+#   This program attempts various search methods to achieve an
+#   optimal solution for the Steel Mill problem without implementing
+#   any constraint based solutions.
+#
+#   Only OO techniques are used.  This is for educational purposes.
+#
+#   Program should be used from a shell command in the following manner:
+#
+#   WINDOWS(CMD SHELL):
+#       C:\Users\<username>\Documents> type <filename> | pyhton steelmill.py
+#
+#       This assumes the problem file has been placed in the documents folder
+#       of you particular user directory.
+#
+#   UNIX/LINUX(BASH SHELL):
+#       <user>\home\Documents$ cat <filename> | python steelmill.py
+#   
+#   All output will be placed in the shell window, but can be piped or echo'd into
+#   another file.
+"""
+
 import sys, string
 
 """
@@ -30,10 +54,15 @@ class Order(object):
 class Slab(object):
     def __init__(self, size = 0):
         self.size = size
+        self.segments = list()
+        self.sizeRemaining = size
     def getSize(self):
         return self.size
     def setSize(self, size):
         self.size = size
+        self.sizeRemaining = size
+    def getSizeRemaining(self):
+        return self.sizeRemaining
         
         
 """
